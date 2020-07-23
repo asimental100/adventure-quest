@@ -36,6 +36,13 @@ export function renderSection(quest) {
     return section;
 }
 
-export function findBYId(array, id) {
-    return array.find(i => i.id === id);
+export function findById(arrayName, idName) {
+    for (let i = 0; i < arrayName.length; i++) {
+        const item = arrayName[i];
+
+        if (item.id === idName) {
+            return item;
+        }
+    }
+    return null;
 }

@@ -5,7 +5,7 @@ const monsters = {
         top: '89%',
         left: '44%'
     },
-    image: 'monsters.jpg',
+    image: 'http://placekitten.com/250/250/',
     description: `
         You enter the quest chamber only to be confronted by a hoard of
         monsters. And they look hungry. What do you do?
@@ -50,7 +50,7 @@ const dragon = {
         top: '57%',
         left: '67%'
     },
-    image: 'dragon.jpg',
+    image: 'http://placekitten.com/250/250/',
     audio: 'dragon.wav',
     action: 'dragon-growl.aiff',
     description: `
@@ -105,7 +105,7 @@ const treasure = {
         top: '31%',
         left: '5%'
     },
-    image: 'treasure-chests.png',
+    image: 'http://placekitten.com/250/250/',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
@@ -146,7 +146,7 @@ const quests = [
             top: '61%',
             left: '10%'
         },
-        image: 'treasure-chests.png',
+        image: 'http://placekitten.com/250/250/',
         audio: 'treasure-chests.wav',
         action: 'chest-opening.wav',
         description: `
