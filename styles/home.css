@@ -8,3 +8,17 @@ label {
     display: block;
     margin: 25px;
 }
+
+label img {
+    width: 210px;
+    height: 225px;
+}
+
+.input-labels {
+    display: inline-block;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
