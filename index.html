@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>
+        Welcome to The Spy Adventure Game!
+    </h1>
+    <form>
+        <label>
+            <input type="text" name="name" placeholder="Enter Your Spy Name">
+        </label>
+        <label>
+            <div>
+                Pick Your Spy Persona!
+            </div>
+        </label>
+        <label class="input-labels">
+            <img src="./assets/007.jpg" alt="Bond. James Bond">
+            <div>007</div>
+            <input value="007" type="radio" name="class">
+        </label>
+        <label class="input-labels">
+            <img src="./assets/mr-bean.jpg" alt="Mr. Bean">
+            <div>Mr. Bean</div>
+            <input value="Mr. Bean" type="radio" name="class">
+        </label>
+        <label class="input-labels">
+            <img src="./assets/austin-powers.jpg" alt="Austin Powers">
+            <div>Austin Powers</div>
+            <input value="Austin Powers" type="radio" name="class">
+        </label>
+        <label class="input-labels">
+            <img src="./assets/scientologist.jpeg" alt="Scientologist">
+            <div>A Scientologist</div>
+            <input value="Scientologist" type="radio" name="class">
+        </label>
+        <button>Submit</button>
+    </form>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

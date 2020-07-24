@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: cornsilk;
+}
+
+label {
+    display: block;
+    margin: 10px;
+}
+
+img {
+    width: 450px;
+    height: 450px;
+}
