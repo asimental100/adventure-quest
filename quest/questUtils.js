@@ -44,12 +44,12 @@ export function renderSection(quest) {
 
         user.gold += results.gold;
         user.hp += results.hp;
-        user.completed[quest.id] = true;
+        console.log(user);
+        console.log(user.complete);
+        user.complete[quest.id] = true;
+        console.log(user.complete);
 
         setUser(user);
-
-        const stringyUser = JSON.stringify(user);
-        localStorage.setItem('USER', stringyUser);
 
         const resultDiv = document.querySelector('#results');
         resultDiv.textContent = results.result;

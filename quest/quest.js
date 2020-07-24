@@ -1,8 +1,8 @@
 import allQuests from '../data.js';
-import { findById, renderSection } from '../quest/questUtils.js';
+import { findById, renderSection } from './questUtils.js';
 
 const main = document.querySelector('main');
-const nextButton = document.querySelector('button');
+const backToMap = document.querySelector('#back-to-map');
 
 const params = new URLSearchParams(window.location.search);
 
@@ -12,7 +12,7 @@ const questData = findById(allQuests, questId);
 
 const sectionEl = renderSection(questData);
 
-nextButton.addEventListener('click', () => {
+backToMap.addEventListener('click', () => {
     window.location = '../map';
 });
 

@@ -1,3 +1,4 @@
+
 const monsters = {
     id: 'monsters',
     title: 'A Den of Monsters',
@@ -5,7 +6,7 @@ const monsters = {
         top: '89%',
         left: '44%'
     },
-    image: 'http://placekitten.com/250/250/',
+    image: 'http://www.placekitten.com/200/200',
     description: `
         You enter the quest chamber only to be confronted by a hoard of
         monsters. And they look hungry. What do you do?
@@ -50,9 +51,7 @@ const dragon = {
         top: '57%',
         left: '67%'
     },
-    image: 'http://placekitten.com/250/250/',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+    image: 'http://www.placekitten.com/200/200',
     description: `
         You travel to a nearby village you have heard is being
         terrorized by a dragon. Sure enough as you rent a room
@@ -105,9 +104,7 @@ const treasure = {
         top: '31%',
         left: '5%'
     },
-    image: 'http://placekitten.com/250/250/',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    image: 'http://www.placekitten.com/200/200',
     description: `
         As you enter the quest chamber you notice three chests before you.
         Just as you start to imagine the wealth, you see a giant serpent
@@ -139,44 +136,7 @@ const treasure = {
 const quests = [
     monsters, 
     treasure,
-    dragon, {
-        id: 'pleasure',
-        title: 'The Bold Folding Pleasure',
-        map: {
-            top: '61%',
-            left: '10%'
-        },
-        image: 'http://placekitten.com/250/250/',
-        audio: 'treasure-chests.wav',
-        action: 'chest-opening.wav',
-        description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
-    `,
-        choices: [{
-            id: 'wooden',
-            description: 'WOW',
-            result: 'You grab 40 gold pieces!',
-            hp: 0,
-            gold: 40
-        }, {
-            id: 'golden',
-            description: 'NOW',
-            result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-            hp: -50,
-            gold: 0
-        }, {
-            id: 'jeweled',
-            description: 'POW',
-            result: 'A warm light engulfs you and you gain 35 hp',
-            hp: 35,
-            gold: 0
-        }
-        ]
-    }
+    dragon
 ];
 
 export default quests;
