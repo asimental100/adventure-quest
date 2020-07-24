@@ -31,6 +31,11 @@ export function renderSection(quest) {
 
     const button = document.createElement('button');
     button.textContent = 'Submit';
+    button.style.marginBottom = '20px';
+
+    button.addEventListener('click', () => {
+        button.style.display = 'none';
+    });
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -44,10 +49,7 @@ export function renderSection(quest) {
 
         user.gold += results.gold;
         user.hp += results.hp;
-        console.log(user);
-        console.log(user.complete);
         user.complete[quest.id] = true;
-        console.log(user.complete);
 
         setUser(user);
 

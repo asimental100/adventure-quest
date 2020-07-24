@@ -4,7 +4,7 @@ export function makeUser(formData) {
         class: formData.get('class'),
         hp: 35,
         gold: 0,
-        complete: {}
+        complete: {},
     };
 }
 

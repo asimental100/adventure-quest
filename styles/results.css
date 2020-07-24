@@ -3,3 +3,20 @@ body {
     background-color: cornsilk;
     text-transform: capitalize;
 }
+
+div {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 50px;
+}

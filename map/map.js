@@ -4,9 +4,7 @@ import { getUser } from '../userUtils.js';
 const user = getUser();
 
 if (user.hp <= 0) {
-    alert('GAME OVER!\nYou have died!\nYou had ' + user.gold + ' gold.');
-    localStorage.clear();
-    window.location = '../index.html';
+    window.location = '../results/index.html';
 }
 
 const section = document.querySelector('section');
@@ -22,14 +20,11 @@ for (let i = 0; i < quests.length; i++) {
 }
 
 if (completedQuests === quests.length) {
-    alert('Well Done! You have won the game and finished with ' + user.gold + ' gold!');
-    localStorage.clear();
-    window.location = '../index.html';
+    window.location = '../results/index.html';
 }
 
 for (let i = 0; i < quests.length; i++) {
     const quest = quests[i];
-    console.log(quest.id);
     
     if (user.complete[quest.id] === true) {
         const span = document.createElement('span');

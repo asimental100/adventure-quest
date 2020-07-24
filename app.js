@@ -12,8 +12,6 @@ form.addEventListener('submit', (e) => {
 
     const user = makeUser(formData);
 
-    console.log(user);
-
     setUser(user);
 
     window.location = './map';
