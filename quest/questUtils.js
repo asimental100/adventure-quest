@@ -30,6 +30,27 @@ export function renderSection(quest) {
     const button = document.createElement('button');
     button.textContent = 'Submit';
 
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        const choiceID = formData.get('choices');
+        const results = findById(quest.choices, choiceID);
+
+        const user = JSON.parse(localStorage.getItem('USER'));
+
+        user.gold = results.gold;
+        user.hp = results.hp;
+
+        const stringyUser = JSON.stringify(user);
+        localStorage.setItem('USER', stringyUser);
+
+        const resultDiv = document.querySelector('#results');
+        resultDiv.textContent = results.result;
+
+    });
+
     form.append(button);
     section.append(div, img, form);
     

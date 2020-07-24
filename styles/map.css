@@ -3,3 +3,8 @@ body {
     background-color: cornsilk;
     text-transform: capitalize;
 }
+
+a {
+    display: block;
+    margin: 20px;
+}
