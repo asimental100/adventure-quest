@@ -13,7 +13,7 @@ const questData = findById(allQuests, questId);
 const sectionEl = renderSection(questData);
 
 nextButton.addEventListener('click', () => {
-    window.location = './map';
+    window.location = '../map';
 });
 
 main.append(sectionEl);

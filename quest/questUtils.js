@@ -1,3 +1,5 @@
+import { getUser, setUser } from '../userUtils.js';
+
 export function renderSection(quest) {
     const section = document.createElement('section');
     const div = document.createElement('div');
@@ -38,10 +40,13 @@ export function renderSection(quest) {
         const choiceID = formData.get('choices');
         const results = findById(quest.choices, choiceID);
 
-        const user = JSON.parse(localStorage.getItem('USER'));
+        const user = getUser();
 
-        user.gold = results.gold;
-        user.hp = results.hp;
+        user.gold += results.gold;
+        user.hp += results.hp;
+        user.completed[quest.id] = true;
+
+        setUser(user);
 
         const stringyUser = JSON.stringify(user);
         localStorage.setItem('USER', stringyUser);
