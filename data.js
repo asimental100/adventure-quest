@@ -1,142 +1,116 @@
 
-const monsters = {
-    id: 'monsters',
-    title: 'A Den of Monsters',
+const drNO = {
+    id: 'dr-no',
+    title: 'Lab of Dr. No',
     map: {
         top: '89%',
         left: '44%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/dr-no.jpg',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You enter the lab of the evil scientist Dr. No, member of the criminal organization SPECTRE, just as he finishes construsting his nuclear radio beam that will topple the the missle lauches at Cape Canaveral; causing chaos and weakening America in its Cold War with Russia.
     `,
     choices: [{
-        id: 'negotiate',
-        description: 'Negotiate with them',
+        id: 'join',
+        description: 'Join Dr. No and Spectre',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            Who doesn't like a little chaos? You have decided to join Spectre and watch the world burn while holding Dr. No's metal hands. Maybe America and Russia will work things out anyways. You gain 100 gold and lose no hp.
         `,
         hp: 0,
-        gold: 35
+        gold: 100
     }, {
         id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        description: 'Fight Dr. No',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            You charge Dr. No and begin throwing punches. Unfortunately, Dr. No's metal hands land a few punches, breaking one of your ribs and causing you to fall to the ground. At this point you remember that you have a gun. You pull out your gun, shoot Dr. No, shoot his radio and save the day! You lose 10hp and gain no gold.
         `,
-        hp: -30,
-        gold: 50
+        hp: -10,
+        gold: 0
     }, {
-        id: 'run',
-        description: 'Run away like good Sir Robin',
+        id: 'leave',
+        description: 'Decide its too late and leave',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            Dr. No probably can't be stopped at this point and even if he could, trying to stop him would probably hurt. So you decide to leave and go find Moneypenny and enjoy the your life. You gain 20 hp.
         `,
-        hp: -50,
+        hp: 20,
         gold: 0
     }]
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A Problem Dragon',
+const goldfinger = {
+    id: 'goldfinger',
+    title: 'Gold Bullion Depository at Fort Knox',
     map: {
         top: '57%',
         left: '67%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/goldfinger.jpg',
     description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You find yourself, and CIA agent Felix Leiter, inside the gold bullion depository at Fort Knox staring at a radiation bomb planted by the devious, sadistic villian Goldfinger. Goldfinger planted with bomb with the intention of rendering the gold inside Fort Knox radioactive and unusable thus increasing the value of his own gold stockpile. There is only 1 minute left on the bomb's timer.
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'steal',
+        description: 'Grab as much gold as you can carry and run away',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            Despite quickly explaining your reasoning to Felix before grabbing a couple gold bars and stuffing them into your suit, Felix remains true to principles and shoots you in the back as you try to exit the room. He then disarms the bomb himself. You lose 100 hp and gain 0 gold.
         `,
-        hp: -35,
-        gold: 35
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
-        `,
-        hp: -45,
+        hp: -100,
         gold: 0
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'shoot',
+        description: 'shoot the bomb!',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            What did you think would happen? You shot the bomb, the bomb goes off, killing you and felix very painfully and somewhat quickly from extreme radiation poisoning. You lose 200 hp.
+        `,
+        hp: -200,
+        gold: 0
+    }, {
+        id: 'defuse',
+        description: 'Work together with Felix to disarm the bomb',
+        result: `
+            You and Felix quickly try to remember the lessons you learned from week 3 of spy school when you learned how to disarm bombs. The seven martinis you had earlier in the day help to calm your nerves and the bomb is disarmed with time to spare. Felix thanks you for your service to American Government and gives you a gold bar as a reward. You gain 100 gold.
         `,
         hp: 0,
-        gold: 90
+        gold: 100
     }]
 };
 
 const treasure = {
     id: 'treasure',
-    title: 'The Golden Treasure',
+    title: 'Casino in Monaco',
     map: {
         top: '31%',
         left: '5%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/le-chiffre.jpg',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        Only two players are left in the poker game: You and the dastardly banker Le Chiffre who has financing terrorist operations all around the world. Lucky for you he's got a gambling problem and on this last hand has called you and gone all-in thereby risking his entire network and his ability to fund terrorism. You have a pair of Queens and on the table there is one Queen, one Nine and two Eights. What do you want the last card to be?
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
-        hp: 0,
-        gold: 40
+        id: 'King',
+        description: 'A King',
+        result: 'A King comes up thereby improving the straight that Le Chiffre already had with his 10 and Jack. You lose the game and your reward is death. You lose 100 hp.',
+        hp: -100,
+        gold: 0
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        id: 'Two',
+        description: 'A Two',
+        result: 'A Two comes up and does nothing for either of you but Le Chiffre has a straight thanks to his 10 and Jack. You lose the game and your reward is death.',
         hp: -50,
         gold: 0
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
-        gold: 0
+        id: 'Eight',
+        description: 'An Eight',
+        result: 'An Eight comes up thereby giving you a full house of Queens and Eights beating the straight of Le Chiffre. You win and gain all of the illicit funds he had using to fund terrorism.',
+        hp: 0,
+        gold: 100
     }]
 };
 
 const quests = [
-    monsters, 
+    drNO, 
     treasure,
-    dragon
+    goldfinger
 ];
 
 export default quests;
